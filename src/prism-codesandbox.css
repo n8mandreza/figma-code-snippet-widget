@@ -1,0 +1,291 @@
+/* PrismJS Theme Converted from VSCode Theme */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #e5e5e5;
+    /* Default text color */
+    background: #151515;
+    /* Default background color */
+    text-shadow: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+}
+
+/* Default token styles */
+.comment,
+.prolog,
+.doctype,
+.cdata {
+    color: #6F6F6F;
+    /* Comment color */
+}
+
+.punctuation {
+    color: #86897A;
+    /* Punctuation color */
+}
+
+.property,
+.tag,
+.boolean,
+.number,
+.constant,
+.symbol,
+.deleted {
+    color: #7AD9FB;
+    /* Constant color */
+}
+
+.selector,
+.attr-name,
+.string,
+.char,
+.builtin,
+.inserted {
+    color: #BFD084;
+    /* String color */
+}
+
+.operator,
+.entity,
+.url,
+.language-css .string,
+.style .string,
+.variable {
+    color: #B3E8B4;
+    /* Operator and keyword operator color */
+}
+
+.atrule,
+.attr-value,
+.function,
+.class-name {
+    color: #CDF861;
+    /* Function color */
+}
+
+.keyword {
+    color: #A390FF;
+    /* Keyword color */
+}
+
+.regex,
+.important {
+    color: #BFD084;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.entity.name.function {
+    color: #CDF861;
+    /* Function name color */
+}
+
+.entity.name.tag {
+    color: #A390FF;
+    /* Tag name color */
+}
+
+.entity.other.attribute-name {
+    color: #CABEFF;
+    /* Attribute name color */
+}
+
+.entity.other.inherited-class {
+    color: #7AD9FB;
+    /* Inherited class color */
+}
+
+.entity.name.type.class {
+    color: #FFFFFF;
+    /* Class name color */
+    text-decoration: underline;
+}
+
+.meta.function-call {
+    color: #CDF861;
+    /* Function call color */
+}
+
+.constant.character.escape,
+.constant.character.entity.named {
+    color: #BFD084;
+    /* Escape character color */
+}
+
+.variable.other,
+.variable.parameter {
+    color: #FFFFFF;
+    /* Variable color */
+}
+
+.meta.brace.round,
+.meta.jsx.children,
+.meta.embedded,
+.source.groovy.embedded,
+.meta.template.expression {
+    color: #E5E5E5;
+    /* Embedded code color */
+}
+
+.support.module,
+.support.node {
+    color: #7AD9FB;
+    font-style: italic;
+}
+
+.support.type.ts {
+    color: #7AD9FB;
+}
+
+.meta.interface.entity.name.type.interface {
+    color: #7AD9FB;
+}
+
+.keyword.operator,
+.storage.type.function.arrow {
+    color: #B3E8B4;
+}
+
+.variable.css {
+    color: #7AD9FB;
+}
+
+.source.css,
+.entity.other.attribute-name,
+.entity.name.tag.css,
+.entity.other.attribute-name.id,
+.entity.other.attribute-name.class,
+.source.css.meta.selector.css {
+    color: #CDF861;
+}
+
+.support.type.property-name.css {
+    color: #FFFFFF;
+}
+
+.support.function.css,
+.support.constant.css,
+.keyword.css,
+.constant.numeric.css,
+.constant.other.color.css {
+    color: #A390FF;
+}
+
+.punctuation.section,
+.punctuation.separator,
+.punctuation.definition.entity.css,
+.punctuation.terminator.rule.css {
+    color: #86897A;
+}
+
+.source.css.keyword.other.unit,
+.string.css,
+.punctuation.definition.string.css {
+    color: #CABEFF;
+}
+
+.string.html {
+    color: #CDF861;
+}
+
+.punctuation.definition.tag {
+    color: #86897A;
+}
+
+.markup.markdown {
+    color: #FFFFFF;
+}
+
+.markup.heading.markdown,
+.punctuation.definition.bold.markdown,
+.meta.paragraph.markdown.punctuation.definition.link.description,
+.punctuation.definition.raw.markdown {
+    color: #B3E8B4;
+}
+
+.meta.paragraph.markdown {
+    color: #E5E5E5;
+}
+
+.text.html.markdown.meta.attribute {
+    color: #CABEFF;
+}
+
+.entity.name.section {
+    color: #FFFFFF;
+}
+
+.string.other,
+.string.other.link {
+    color: #FFFFFF;
+}
+
+.punctuation.definition.markdown,
+.punctuation.definition.string,
+.punctuation.definition.string.begin.shell {
+    color: #B3E8B4;
+}
+
+.markup.underline.link {
+    color: #BFD084;
+}
+
+.markup.inline.raw {
+    color: #86897A;
+}
+
+.text.html.vue.variable.other.readwrite {
+    color: #A390FF;
+}
+
+.text.html.vue.meta.object-literal.key {
+    color: #FFFFFF;
+}
+
+.text.html.vue.entity.name.tag.css {
+    color: #A390FF;
+}
+
+.text.html.vue.entity.other.attribute-name {
+    color: #FFFFFF;
+}
+
+.text.html.vue.constant.numeric.css {
+    color: #7AD9FB;
+}
+
+.text.html.vue.keyword.other.unit,
+.text.html.vue.support.constant.property-value,
+.text.html.vue.support.constant.color {
+    color: #A390FF;
+}
+
+.token.info-token {
+    color: #6796E6;
+}
+
+.token.warn-token {
+    color: #CD9731;
+}
+
+.token.error-token {
+    color: #F44747;
+}
+
+.token.debug-token {
+    color: #B267E6;
+}

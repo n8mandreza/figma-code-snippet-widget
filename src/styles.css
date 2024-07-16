@@ -1,0 +1,18 @@
+.container {
+    overflow: auto;
+    background-color: #1e1e1f;
+}
+
+.textArea {
+    min-height: 100%;
+    font-family: var(--font-family-code);
+    font-size: var(--font-size-12);
+}
+
+.pre {
+    min-height: 100%;
+    font-family: var(--font-family-code);
+    font-size: var(--font-size-12);
+    z-index: 10;
+    pointer-events: none;
+}

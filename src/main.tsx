@@ -7,6 +7,11 @@ const { AutoLayout, Text, useSyncedState, usePropertyMenu } = widget
 
 export default function () {
   widget.register(CodeSnippet)
+
+  on('RESIZE_WINDOW', function (windowSize: { width: number; height: number }) {
+    const { width, height } = windowSize
+    figma.ui.resize(width, height)
+  })
 }
 
 function CodeSnippet() {
@@ -22,12 +27,11 @@ function CodeSnippet() {
   async function onChange({
     propertyName
   }: WidgetPropertyEvent): Promise<void> {
-    await new Promise<void>(function (resolve: () => void): void {
+    await new Promise<void>(function () {
       if (propertyName === 'edit') {
-        showUI({ height: 640, width: 420 }, { code })
+        showUI({ height: 480, width: 320 }, { code })
         on('UPDATE_TEXT', function (code: string): void {
           setCode(code)
-          resolve()
         })
       }
     })

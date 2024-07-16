@@ -15,29 +15,51 @@ export default function () {
 }
 
 function CodeSnippet() {
-  const [code, setCode] = useSyncedState('text', 'Hello Widget')
+  const [code, setCode] = useSyncedState('code', 'Hello Widget')
+  const [language, setLanguage] = useSyncedState('language', 'javascript')
+  const [fontSize, setFontSize] = useSyncedState('fontSize', '16')
   const items: Array<WidgetPropertyMenuItem> = [
     {
       itemType: 'action',
       propertyName: 'edit',
       tooltip: 'Edit'
+    },
+    {
+      itemType: 'dropdown',
+      propertyName: 'fontSize',
+      tooltip: 'Font size',
+      options: [
+        {option: '16', label: '16'},
+        {option: '24', label: '24'},
+        {option: '32', label: '32'}
+      ],
+      selectedOption: fontSize
     }
   ]
 
   async function onChange({
-    propertyName
+    propertyName,
+    propertyValue
   }: WidgetPropertyEvent): Promise<void> {
     await new Promise<void>(function () {
       if (propertyName === 'edit') {
-        showUI({ height: 480, width: 320 }, { code })
+        showUI({ height: 480, width: 320 }, { code, language })
         on('UPDATE_TEXT', function (code: string): void {
           setCode(code)
         })
+      }
+
+      if (propertyName === 'fontSize') {
+        propertyValue ? setFontSize(propertyValue) : console.log('Invalid value')
       }
     })
   }
 
   usePropertyMenu(items, onChange)
+
+  on('UPDATE_LANGUAGE', function (language: string): void {
+    setLanguage(language)
+  })
 
   return (
     <AutoLayout
@@ -65,6 +87,7 @@ function CodeSnippet() {
         width="fill-parent"
         fontFamily="Roboto Mono"
         fontWeight={500}
+        fontSize={Number(fontSize)}
       >
         {code}
       </Text>

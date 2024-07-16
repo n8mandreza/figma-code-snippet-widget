@@ -5,9 +5,13 @@ import { useCallback, useState } from 'preact/hooks'
 
 import Editor from 'react-simple-code-editor'
 import { highlight, languages } from 'prismjs'
+import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-kotlin';
 import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-ruby';
+import 'prismjs/components/prism-rust';
+import 'prismjs/components/prism-sql';
 import 'prismjs/components/prism-swift';
 import 'prismjs/components/prism-typescript';
 
@@ -20,12 +24,16 @@ function Plugin(props: { code: string, language: string }) {
   const [code, setCode] = useState(props.code)
   const [language, setLanguage] = useState(props.language)
   const languageOptions = [
+    { label: 'C-like', value: 'clike' },
     { label: 'CSS', value: 'css' },
     { label: 'HTML', value: 'html' },
     { label: 'JavaScript', value: 'javascript' },
     { label: 'JSON', value: 'json' },
     { label: 'Kotlin', value: 'kotlin' },
     { label: 'Python', value: 'python' },
+    { label: 'Ruby', value: 'ruby' },
+    { label: 'Rust', value: 'rust' },
+    { label: 'SQL', value: 'sql' },
     { label: 'Swift', value: 'swift' },
     { label: 'Typescript', value: 'typescript' },
   ]

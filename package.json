@@ -27,6 +27,10 @@
     "id": "1394789460780312040",
     "name": "Code Snippet",
     "main": "src/main.tsx",
-    "ui": "src/ui.tsx"
+    "ui": "src/ui.tsx",
+    "networkAccess": {
+      "allowedDomains": ["none"]
+    },
+    "documentAccess": "dynamic-page"
   }
 }
